@@ -148,7 +148,7 @@ exports.forgotPassword = asyncHandler(async (req, res) => {
   user.resetPasswordExpires = new Date(Date.now() + 15 * 60 * 1000);
   await user.save();
 
-  const clientOrigin = process.env.CLIENT_ORIGIN || "http://localhost:5173";
+  const clientOrigin = process.env.CLIENT_ORIGIN || "https://alumni-lk5t.onrender.com";
   const resetUrl = `${clientOrigin}/reset-password?token=${rawToken}`;
 
   try {

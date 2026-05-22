@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "http://localhost:5173",
+  baseURL: import.meta.env.VITE_API_URL || "https://alumni-lk5t.onrender.com",
 });
 
 api.interceptors.request.use((config) => {
